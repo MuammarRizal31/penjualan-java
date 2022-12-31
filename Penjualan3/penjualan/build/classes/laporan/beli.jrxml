@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9d6baadf-5284-4bdc-8fc7-27226cb560cd">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="tgl1" class="java.util.Date">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="tgl2" class="java.util.Date">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select*from beli WHERE TanggalBeli between $P{tgl1} and $P{tgl2}]]>
+	</queryString>
+	<field name="NoBeli" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="KodeBarang" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NamaBarang" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TanggalBeli" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="HargaBeli" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Jumlah" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TotalHarga" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="91" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="64b497a9-16ce-454e-b635-3fbc51515d4b" x="118" y="0" width="407" height="39"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CV ANUGERAH SEJETERAH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="64b497a9-16ce-454e-b635-3fbc51515d4b" x="167" y="39" width="251" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[JL.LEBAK SARI N0.23 JAKARTA SELATAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="64b497a9-16ce-454e-b635-3fbc51515d4b" x="178" y="59" width="240" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NO.FAX 021(43234234) NO.TLP 021(2324587389)]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="1cd21983-5485-4896-a58b-fb1fe5343b89" x="-39" y="79" width="622" height="1"/>
+			</line>
+			<image>
+				<reportElement uuid="0f8be54e-e439-498f-bd6e-f2fc938c2aef" x="0" y="0" width="99" height="79"/>
+				<imageExpression><![CDATA["C:\\Users\\dc\\Documents\\NetBeansProjects\\penjualan\\src\\gambar\\alat2.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="44" splitType="Stretch">
+			<line>
+				<reportElement uuid="051d6cd2-e971-430a-b2a8-daa2240c10d5" x="-39" y="0" width="622" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="da801f52-5555-4a5a-a0f3-d69d91fa1fdb" x="205" y="1" width="162" height="20"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN PEMBELIAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="87f169e3-c272-4e31-b89a-8b981502f6c7" x="178" y="21" width="51" height="20"/>
+				<textElement/>
+				<text><![CDATA[PERIODE]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="30d22d50-8ee2-439b-927f-09eb76e6eb6d" x="230" y="21" width="66" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{tgl1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2f7c639a-b33b-4de3-8ac2-f6b7cb1840f2" x="318" y="21" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{tgl2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="87f169e3-c272-4e31-b89a-8b981502f6c7" x="296" y="21" width="22" height="20"/>
+				<textElement/>
+				<text><![CDATA[S/D]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="57" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="47a00342-e637-48b3-a541-e8b013ea970f" x="318" y="37" width="100" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="47a00342-e637-48b3-a541-e8b013ea970f" x="218" y="37" width="100" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="47a00342-e637-48b3-a541-e8b013ea970f" x="118" y="37" width="100" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="47a00342-e637-48b3-a541-e8b013ea970f" x="52" y="37" width="66" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="47a00342-e637-48b3-a541-e8b013ea970f" x="0" y="37" width="52" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="47a00342-e637-48b3-a541-e8b013ea970f" x="469" y="37" width="100" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="47a00342-e637-48b3-a541-e8b013ea970f" x="418" y="37" width="51" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="64b497a9-16ce-454e-b635-3fbc51515d4b" x="218" y="37" width="100" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Tanggal Beli]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="87f169e3-c272-4e31-b89a-8b981502f6c7" x="318" y="37" width="100" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Harga Beli]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6bcf5e0d-d281-4968-bc78-6ef41ad0afcf" x="418" y="37" width="51" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Jumlah]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a6996b98-cd66-423d-bdf7-f523f92afaca" x="469" y="37" width="100" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Total Harga]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="64b497a9-16ce-454e-b635-3fbc51515d4b" x="118" y="37" width="100" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Nama Barang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="64b497a9-16ce-454e-b635-3fbc51515d4b" x="52" y="37" width="66" height="20"/>
+				<textElement/>
+				<text><![CDATA[Kode Barang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="64b497a9-16ce-454e-b635-3fbc51515d4b" x="0" y="37" width="52" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[No beli]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="47a00342-e637-48b3-a541-e8b013ea970f" x="469" y="0" width="100" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="47a00342-e637-48b3-a541-e8b013ea970f" x="418" y="0" width="51" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="47a00342-e637-48b3-a541-e8b013ea970f" x="318" y="0" width="100" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="47a00342-e637-48b3-a541-e8b013ea970f" x="218" y="0" width="100" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="47a00342-e637-48b3-a541-e8b013ea970f" x="118" y="0" width="100" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="47a00342-e637-48b3-a541-e8b013ea970f" x="52" y="0" width="66" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="47a00342-e637-48b3-a541-e8b013ea970f" x="0" y="0" width="52" height="20"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="4bdb85fc-fba1-40d0-a51a-827f7bb22b85" x="0" y="0" width="52" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{NoBeli}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="72a31b57-65d7-421a-9744-69c58657c752" x="52" y="0" width="66" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{KodeBarang}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="87dfbd78-8062-4006-9d0b-fd871dcf03b1" x="118" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{NamaBarang}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="799606a9-5c6e-4cad-90cf-c0602777c6f4" x="218" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{TanggalBeli}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="22c64c1b-f12b-4071-b6cc-97980491666b" x="318" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{HargaBeli}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5420ec2e-ea7d-40c1-b21b-f95256412557" x="418" y="0" width="51" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Jumlah}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ce1ab308-24bc-4316-b1a9-252790d6e6a1" x="469" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{TotalHarga}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="47" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
